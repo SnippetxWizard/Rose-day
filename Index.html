@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Rose Emoji</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fde1e6;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .text {
+            color: #e91e63;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+        }
+
+        .rose-container {
+            display: inline-block;
+            font-size: 50px;
+            cursor: pointer;
+            text-shadow: 0 0 10px #e91e63, 0 0 20px #ff4081, 0 0 30px #ff80ab;
+            transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+        }
+
+        .rose-container:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 15px #e91e63, 0 0 25px #ff4081, 0 0 35px #ff80ab;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="text">Your smile is as beautiful as a rose,<br> I hope you can always smile.<br> (✿◕‿◕)</p>
+        <div class="rose-container">🌹</div>
+    </div>
+
+    <script>
+        document.querySelector(".rose-container").addEventListener("mouseover", function() {
+            document.querySelector(".text").innerHTML = "Your smile makes my world brighter! ✨🌹";
+        });
+
+        document.querySelector(".rose-container").addEventListener("mouseout", function() {
+            document.querySelector(".text").innerHTML = "Your smile is as beautiful as a rose,<br> I hope you can always smile.<br> (✿◕‿◕)";
+        });
+    </script>
+</body>
+</html>
